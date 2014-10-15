@@ -44,9 +44,16 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="GameObjects\ComplexObject.cs" />
+    <Compile Include="GameObjects\Components\Entity.cs" />
+    <Compile Include="GameObjects\Components\Newtonian.cs" />
+    <Compile Include="GameObjects\Components\Primitive.cs" />
+    <Compile Include="GameObjects\Components\Transformation.cs" />
     <Compile Include="GameObjects\FollowCamera.cs" />
     <Compile Include="GameObjects\IWorldObject.cs" />
+    <Compile Include="GameObjects\Managers\NewtonianSystem.cs" />
     <Compile Include="GameObjects\Primitive.cs" />
+    <Compile Include="GameObjects\Managers\RenderingSystem.cs" />
+    <Compile Include="GameObjects\World.cs" />
     <Compile Include="Graphics\Billboard.cs" />
     <Compile Include="Graphics\Drawings\SpriteBatchHelpers.cs" />
     <Compile Include="Graphics\Camera\ICamera.cs" />

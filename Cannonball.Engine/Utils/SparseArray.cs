@@ -33,13 +33,20 @@ namespace Cannonball.Engine.Utils
             {
                 if (dictionary.ContainsKey(index))
                 {
-                    dictionary[index] = value;
+                    if (value.Equals(defaultValue))
+                        dictionary.Remove(index);
+                    else dictionary[index] = value;
                 }
                 else
                 {
                     dictionary.Add(index, value);
                 }
             }
+        }
+
+        public bool IndexExists(TKey index)
+        {
+            return !this[index].Equals(defaultValue);
         }
 
         #region IEnumerable<KeyValuePair<TKey, TValue>> members
