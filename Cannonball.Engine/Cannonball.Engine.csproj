@@ -85,6 +85,7 @@
     <Compile Include="Utils\KeyboardHelpers.cs" />
     <Compile Include="Utils\Diagnostics\Subsystems\FPSCounter.cs" />
     <Compile Include="Utils\RandomizationExtensions.cs" />
+    <Compile Include="Utils\SparseArray.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MonoGame.Framework">
