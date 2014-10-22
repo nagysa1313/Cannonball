@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Cannonball.Engine.GameObjects.Managers
+namespace Cannonball.GameObjects.Managers
 {
     public class NewtonianSystem
     {

@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Cannonball.Engine.GameObjects.Components
+namespace Cannonball.GameObjects.Components
 {
     public class Primitive
     {

@@ -4,18 +4,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Cannonball.Engine.GameObjects.Managers
+namespace Cannonball.GameObjects.Managers
 {
-    class RenderingSystem
+    public class InputSystem
     {
         private World world;
 
-        public RenderingSystem(World world)
+        public InputSystem(World world)
         {
             this.world = world;
         }
 
-        public void Draw(GameTime gameTime)
+        public void Handle(GameTime gameTime)
         {
             // TODO
         }

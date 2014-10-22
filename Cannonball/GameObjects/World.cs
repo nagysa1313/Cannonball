@@ -1,13 +1,14 @@
-﻿using Cannonball.Engine.GameObjects.Components;
-using Cannonball.Engine.GameObjects.Managers;
+﻿using Cannonball.GameObjects.Components;
+using Cannonball.GameObjects.Managers;
 using Cannonball.Engine.Utils;
 using Microsoft.Xna.Framework;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Cannonball.Engine.Graphics;
 
-namespace Cannonball.Engine.GameObjects
+namespace Cannonball.GameObjects
 {
     public class World
     {
@@ -21,10 +22,10 @@ namespace Cannonball.Engine.GameObjects
         private NetworkSystem networkSystem;
         private InputSystem inputSystem;
 
-        public World()
+        public World(Renderer renderer)
         {
             newtonianSystem = new NewtonianSystem(this);
-            renderingSystem = new RenderingSystem(this);
+            renderingSystem = new RenderingSystem(this, renderer);
             networkSystem = new NetworkSystem(this);
             inputSystem = new InputSystem(this);
         }
