@@ -50,6 +50,8 @@
     <Compile Include="GameObjects\Components\Transformation.cs" />
     <Compile Include="GameObjects\FollowCamera.cs" />
     <Compile Include="GameObjects\IWorldObject.cs" />
+    <Compile Include="GameObjects\Managers\InputSystem.cs" />
+    <Compile Include="GameObjects\Managers\NetworkSystem.cs" />
     <Compile Include="GameObjects\Managers\NewtonianSystem.cs" />
     <Compile Include="GameObjects\Primitive.cs" />
     <Compile Include="GameObjects\Managers\RenderingSystem.cs" />
