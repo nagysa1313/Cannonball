@@ -50,8 +50,17 @@
     <ApplicationIcon>Icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="GameObjects\Components\Entity.cs" />
+    <Compile Include="GameObjects\Components\Newtonian.cs" />
+    <Compile Include="GameObjects\Components\Primitive.cs" />
+    <Compile Include="GameObjects\Components\Transformation.cs" />
+    <Compile Include="GameObjects\Managers\InputSystem.cs" />
+    <Compile Include="GameObjects\Managers\NetworkSystem.cs" />
+    <Compile Include="GameObjects\Managers\NewtonianSystem.cs" />
+    <Compile Include="GameObjects\Managers\RenderingSystem.cs" />
     <Compile Include="GameObjects\Ship.cs" />
     <Compile Include="GameObjects\Thruster.cs" />
+    <Compile Include="GameObjects\World.cs" />
     <Compile Include="LightningTestGame.cs" />
     <Compile Include="LSystemTestGame.cs" />
     <Compile Include="ParticleTestGame.cs" />
@@ -60,6 +69,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SphereTestGame.cs" />
+    <Compile Include="WorldTestGame.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MonoGame.Framework">
