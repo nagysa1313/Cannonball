@@ -130,10 +130,6 @@ namespace Cannonball
             DiagnosticsManager.Instance.TimeRuler.BeginMark("DrawScene", Color.Red);
             GraphicsDevice.SetRenderTarget(sceneTarget);
 
-            GraphicsDevice.DepthStencilState = new DepthStencilState() { DepthBufferEnable = true };
-
-            GraphicsDevice.Clear(Color.Black);
-
             Renderer.Draw(GraphicsDevice, gameTime);
 
             GraphicsDevice.SetRenderTarget(null);

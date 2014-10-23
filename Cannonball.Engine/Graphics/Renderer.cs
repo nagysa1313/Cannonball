@@ -72,6 +72,9 @@ namespace Cannonball.Engine.Graphics
 
         public void Draw(GraphicsDevice device, GameTime gameTime)
         {
+            device.DepthStencilState = new DepthStencilState() { DepthBufferEnable = true };
+            device.Clear(Color.Black);
+
             foreach (var primitive in primitives.Keys)
             {
                 foreach (var matrix in primitives[primitive])
