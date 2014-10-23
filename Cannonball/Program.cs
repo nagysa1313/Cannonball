@@ -18,7 +18,8 @@ namespace Cannonball
         [STAThread]
         static void Main()
         {
-            using (var game = new SphereTestGame())
+            using (var game = new WorldTestGame())
+            //using (var game = new SphereTestGame())
             //using (var game = new ParticleTestGame())
             //using (var game = new PlasmaTestGame())
             //using (var game = new LSystemTestGame())

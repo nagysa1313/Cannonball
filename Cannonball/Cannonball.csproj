@@ -52,6 +52,8 @@
   <ItemGroup>
     <Compile Include="GameObjects\Components\Entity.cs" />
     <Compile Include="GameObjects\Components\Newtonian.cs" />
+    <Compile Include="GameObjects\Components\Player.cs" />
+    <Compile Include="GameObjects\Components\PlayerControl.cs" />
     <Compile Include="GameObjects\Components\Primitive.cs" />
     <Compile Include="GameObjects\Components\Transformation.cs" />
     <Compile Include="GameObjects\Managers\InputSystem.cs" />

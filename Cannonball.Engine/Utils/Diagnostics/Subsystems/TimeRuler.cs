@@ -219,7 +219,7 @@ namespace Cannonball.Engine.Utils.Diagnostics.Subsystems
 
         StringBuilder logString = new StringBuilder(512);
 
-        private Vector2 position;
+        private Vector2 position = Vector2.Zero;
         #endregion
 
         #region Measuring methods

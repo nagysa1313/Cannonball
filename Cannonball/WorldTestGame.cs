@@ -13,6 +13,9 @@ using Cannonball.Engine.Utils.Diagnostics;
 using Cannonball.Engine.GameObjects;
 using Cannonball.Engine.Graphics;
 using Cannonball.GameObjects;
+using Cannonball.Engine.Graphics.Camera;
+using Cannonball.Engine.Inputs;
+using Cannonball.Engine.Procedural.Objects;
 #endregion
 
 namespace Cannonball
@@ -66,12 +69,32 @@ namespace Cannonball
             this.Services.AddService(typeof(SpriteBatch), spriteBatch);
             DiagnosticsManager.Initialize(this);
             SpriteBatchHelpers.Initialize(GraphicsDevice);
-            Renderer = new Engine.Graphics.Renderer();
+            Primitives.Initialize(GraphicsDevice);
+
+            Renderer = new Engine.Graphics.Renderer()
+            {
+                Camera = new PerspectiveCamera()
+                {
+                    Position = Vector3.UnitX,
+                    Target = Vector3.Zero,
+                    Up = Vector3.Up,
+                    FieldOfView = MathHelper.PiOver4,
+                    AspectRatio = GraphicsDevice.Viewport.AspectRatio,
+                    NearPlane = 0.01f,
+                    FarPlane = 5000f
+                }
+            };
 
             // TODO: use this.Content to load your game content here
-            World = new World(Renderer);
+            // TODO: load assets (player string font and player model)
 
+            World = new World(this, Renderer);
 
+            var player = World.SpawnPlayer("Player1");
+            var playerTrans = World.Transformations[player];
+            playerTrans.Scale = new Vector3(2);
+
+            // TODO: load world state from data files
 
             base.LoadContent();
         }
@@ -111,7 +134,7 @@ namespace Cannonball
 
             GraphicsDevice.Clear(Color.Black);
 
-            // TODO: Renderer.Draw(GraphicsDevice, gameTime);
+            Renderer.Draw(GraphicsDevice, gameTime);
 
             GraphicsDevice.SetRenderTarget(null);
             DiagnosticsManager.Instance.TimeRuler.EndMark("DrawScene");

@@ -14,11 +14,6 @@ namespace Cannonball.Engine.Utils.Diagnostics.Subsystems
 
         static GameComponentFactory()
         {
-            Initialize();
-        }
-
-        private static void Initialize()
-        {
             var asm = Assembly.GetExecutingAssembly();
             foreach (var type in asm.GetTypes())
             {
